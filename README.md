@@ -5,17 +5,16 @@
 ## A Taxi App (UI only) based on a free layout that I`ve found on web.
 
 The purpose of this app is to practice React Native.
+ The layout can be found in: https://www.uistore.design/items/roxio-free-taxi-app-for-adobe-xd/
 
-## The layout can be found in: https://www.uistore.design/items/roxio-free-taxi-app-for-adobe-xd/
-
-## Installation
+<!-- ## Installation
 
 ### Requirements
 
 - Nodejs 12 or higher
 ## - [Expo Client App](https://expo.io/tools#client) on your cellphone or IOS emulator (MacOs) or Android Emulator
 
-### How to install
+### How to install -->
 
 <!-- Clone this repo:
 
