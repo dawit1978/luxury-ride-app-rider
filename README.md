@@ -1,6 +1,6 @@
 # React Native Taxi App UI
 
-## ![layout preview](https://static.dribbble.com/users/249315/screenshots/9672694/media/324e429ae37c7e4176801a246f934eaa.png)
+ <!-- ![layout preview](https://static.dribbble.com/users/249315/screenshots/9672694/media/324e429ae37c7e4176801a246f934eaa.png) -->
 
 ## A Taxi App (UI only) based on a free layout that I`ve found on web.
 
