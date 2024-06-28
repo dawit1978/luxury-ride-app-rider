@@ -9,7 +9,7 @@ import Button from '../../components/Button';
 import cabImg from '../../assets/ferr.png';
 import * as S from './styles';
 
-const Home: React.FC = () => {
+const Welcome: React.FC = () => {
   const navigation = useNavigation();
 
   return (
@@ -32,4 +32,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Welcome;

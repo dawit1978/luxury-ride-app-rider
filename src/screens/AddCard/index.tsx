@@ -92,7 +92,7 @@ const AddCard: React.FC = () => {
             />
           </S.CvvWrapper>
         </S.ExpCvvWrapper>
-        <Button onPress={() => navigate('CurrentLocation')}>Add Card</Button>
+        <Button onPress={() => navigate('DrawerNavigator')}>Add Card</Button>
       </S.Inner>
     </S.Container>
   );
