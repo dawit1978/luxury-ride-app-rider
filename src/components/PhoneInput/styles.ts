@@ -15,7 +15,7 @@ export const Container = styled.View<ThemeProps>`
 
 export const Code = styled.Text<ThemeProps>`
   font-size: 18px;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.textColor};
   margin-right: 19px;
 `;
 
@@ -23,5 +23,5 @@ export const Input = styled.TextInput<ThemeProps>`
   font-size: 18px;
   width: 100%;
   height: 100%;
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.textColor};
 `;

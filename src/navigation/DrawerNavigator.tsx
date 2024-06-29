@@ -35,15 +35,15 @@ const DrawerNavigator: React.FC<DrawerProps> = (props)=> {
                         <EIcon name="menu" size={30} color="#000000" />
                       </TouchableOpacity>
               
-                 <View style={styles.logoContainer}>
+                 {/* <View style={styles.logoContainer}>
                       <Image
                         source={require("../assets/logo.png")}
                         style={{ height: 95, width: 95}}
                         />
-                  </View>
+                  </View> */}
               </View>
                     
-                    <View
+                    {/* <View
                     style={styles.searchContainer}
                     >
                       <Search
@@ -52,7 +52,7 @@ const DrawerNavigator: React.FC<DrawerProps> = (props)=> {
                           setValue(text)
                         }}
                       />
-                    </View>
+                    </View> */}
                    
                 </View>)
         }}

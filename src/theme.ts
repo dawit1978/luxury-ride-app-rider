@@ -7,6 +7,7 @@ interface ThemeAttributes {
   color: {
     primary: string;
     secondary: string;
+    textColor:string ;
     gray: string;
     white: string;
   };
@@ -25,6 +26,7 @@ const theme: ThemeAttributes = {
   color: {
     primary: '#0d1724',
     secondary: '#1FCD6C',
+    textColor:'#B80028',
     gray: '#CFD1D3',
     white: '#FFF',
   },

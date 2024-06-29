@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
-
 import { ThemeProps } from '../../theme';
-
+import { TouchableOpacity, Text } from 'react-native';
 interface InputProps extends ThemeProps {
   focused?: boolean;
 }
@@ -92,4 +91,17 @@ export const ExpWrapper = styled.View`
 
 export const CvvWrapper = styled.View`
   width: 30%;
+`;
+export const Button = styled.TouchableOpacity`
+  background-color: #B80028;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 25px;
+`;
+export const ButtonText = styled.Text`
+font-family: ${({ theme }) => theme.font.bold};
+font-size: 18px;
+  color: white;
+  justify-content: center;
+  align-items: center;
 `;

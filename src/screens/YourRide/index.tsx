@@ -5,7 +5,7 @@ import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 
-import avatar from '../../assets/avatar.png';
+import avatar from '../../assets/driver.png';
 import theme from '../../theme';
 
 import * as S from './styles';
@@ -20,7 +20,7 @@ const YourRide: React.FC = () => {
         <S.InnerContainer>
           <S.InfoContainer>
             <S.Description>Your ride is</S.Description>
-            <S.Description value>$5.58</S.Description>
+            <S.Description value>$25.58</S.Description>
             <S.Description>March 21, 2020 at 10:30 a.m</S.Description>
           </S.InfoContainer>
           <S.DriverContainer>
@@ -28,7 +28,7 @@ const YourRide: React.FC = () => {
               <S.AvatarContainer>
                 <S.Avatar source={avatar} />
               </S.AvatarContainer>
-              <S.DriverName>Michael Douglas</S.DriverName>
+              <S.DriverName>kassahun Alemu</S.DriverName>
               <S.Description>Rate your driver</S.Description>
               {/* <StarRating
                 disabled={false}
@@ -48,7 +48,9 @@ const YourRide: React.FC = () => {
                 placeholder="Your message..."
               />
             </S.RatingContainer>
-            <Button>Done</Button>
+            <S.Button1>
+              <S.ButtonText>Done</S.ButtonText>
+            </S.Button1>
           </S.DriverContainer>
         </S.InnerContainer>
       </S.Container>
