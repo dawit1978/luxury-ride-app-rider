@@ -19,6 +19,12 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import EIcon from 'react-native-vector-icons/Entypo';
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import FontAwesomeS from 'react-native-vector-icons/FontAwesome5'
+import ContactSupport from 'react-native-vector-icons/MaterialIcons'
+// import avatar from '../../assets/avatar.png';
+
 
 import { DrawerParamsList, DrawerProps } from '../../types';
 type DrawerContentNavigationProp = DrawerProps<DrawerParamsList, 'DrawerContent'>['navigation']
@@ -37,30 +43,15 @@ export const DrawerContent: React.FC<DrawerContentComponentProps>=(props)=>{
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
-                    <View style={styles.userInfoSection}>
-                        <View style={{flexDirection:'row',marginTop: 15}}>
-                            <Avatar.Image 
-                                source={{
-                                    uri: '../assets/ecfcTeam.jpg'
-                                }}
-                                size={50}
-                            />
-                            <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>Test User</Title>
-                                <Caption style={styles.caption}>@test_user</Caption>
-                            </View>
-                        </View>
-
-                        <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
-                            </View>
-                        </View>
+                <View style={styles.userSection}>
+                    <Avatar.Image 
+                        size={80} 
+                        source={require('../assets/avatar.png')} 
+                        style={styles.avatar} 
+                        style={{backgroundColor:"#FF7F7F"}}
+                    />
+                    <Text style={styles.userName}>Abel Tesfaye</Text>
+                    <Text style={styles.userEmail}>abel.tesfaye@gmail.com</Text>
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -68,6 +59,7 @@ export const DrawerContent: React.FC<DrawerContentComponentProps>=(props)=>{
                             icon={({color, size}) => (
                                 <Icon name="ios-home" color={color} size={size} />
                             )}
+                            color="#B80028" 
                             label="Home"
                             onPress={() => {props.navigation.navigate('TabBarNavigator',{
                                 screen:"Home"
@@ -75,38 +67,39 @@ export const DrawerContent: React.FC<DrawerContentComponentProps>=(props)=>{
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <Icon name="ios-newspaper" color={color} size={size} />
+                                <FontAwesome name="history" color={color} size={size} />
                             )}
-                            label="News"
+                            label="RideHistory"
+                            color="#B80028"
                             onPress={() => {props.navigation.navigate('TabBarNavigator',{
-                                screen:"News"
+                                screen:"RideHistory"
                             })}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <Icon name="football" color={color} size={size} />
+                                <FontAwesome5 name="wallet" color={color} size={size} />
                             )}
-                            label="Matches"
+                            label="Wallet"
                             onPress={() => {props.navigation.navigate('TabBarNavigator',{
-                                screen:"Matches"
+                                screen:"Wallet"
                             })}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <EIcon name="shopping-bag" color={color} size={size} />
+                                <FontAwesomeS name="share" color={color} size={size} />
                             )}
-                            label="Shop"
+                            label="Share"
                             onPress={() => {props.navigation.navigate('TabBarNavigator',{
-                                screen:"Shop"
+                                screen:"Share"
                             })}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <EIcon name="chat" color={color} size={size} />
+                                <ContactSupport name="contact-support" color={color} size={size} />
                             )}
-                            label="GroupChat"
+                            label="Support"
                             onPress={() => {props.navigation.navigate('TabBarNavigator',{
-                                screen:"GroupChat"
+                                screen:"Support"
                             })}}
                         />
                     </Drawer.Section>
@@ -183,4 +176,27 @@ const styles = StyleSheet.create({
       paddingVertical: 12,
       paddingHorizontal: 16,
     },
+
+    // new
+    userSection: {
+        backgroundColor: '#B80028',
+        padding: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderBottomEndRadius:25,
+        borderBottomRightRadius:25
+      },
+      avatar: {
+        marginBottom: 10,
+      },
+      userName: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#ffffff',
+        marginTop: 10,
+      },
+      userEmail: {
+        fontSize: 16,
+        color: '#ffffff',
+      },
   });

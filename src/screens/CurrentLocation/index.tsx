@@ -8,7 +8,7 @@ import MapButton from '../../components/MapButton';
 import iconHome from '../../assets/home.png';
 import iconHistory from '../../assets/history.png';
 import iconCenter from '../../assets/map_center.png';
-import marker from '../../assets/marker.png';
+import marker from '../../assets/markerRed.png';
 import customMapStyle from '../../mapstyle.json';
 
 import * as S from './styles';
@@ -71,7 +71,7 @@ const Map: React.FC = () => {
         showsBuildings={false}
         customMapStyle={customMapStyle}
       >
-        <Marker coordinate={latLng} image={marker} />
+        <Marker style={{height:20}} coordinate={latLng} image={marker} />
       </S.Map>
       <S.OptionsContainer>
         <S.LeftOptions>
