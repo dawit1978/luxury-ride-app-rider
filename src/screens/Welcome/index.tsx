@@ -6,17 +6,18 @@ import PhoneInput from '../../components/PhoneInput';
 import Button from '../../components/Button';
 
 // import cabImg from '../../assets/cab.png';
-import cabImg from '../../assets/ferr.png';
+import cabImg from '../../assets/welcome.png';
 import * as S from './styles';
 
 const Welcome: React.FC = () => {
   const navigation = useNavigation();
 
   return (
+    <S.BackgroundImage source={cabImg} resizeMode="cover">
     <S.Container>
       <StatusBar style="light" />
       <S.TopArea>
-        <S.CabImg source={cabImg} resizeMode="contain" />
+        {/* <S.CabImg source={cabImg} resizeMode="contain" /> */}
       </S.TopArea>
       <S.BottomArea>
         <S.Title>
@@ -24,11 +25,14 @@ const Welcome: React.FC = () => {
           <S.TitleBold>Luxury</S.TitleBold>
         </S.Title>
         <PhoneInput placeholder="987 65 43" />
-        <Button onPress={() => navigation.navigate('Verification')}>
-          Get Started
-        </Button>
+        <S.GetStartedButton onPress={() => navigation.navigate('Verification')}>
+          <S.ButtonText>Get Started</S.ButtonText>
+        </S.GetStartedButton>
+        
       </S.BottomArea>
     </S.Container>
+    </S.BackgroundImage>
+         
   );
 };
 

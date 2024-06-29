@@ -8,7 +8,7 @@ import MapButton from '../../components/MapButton';
 import iconHome from '../../assets/home.png';
 import iconHistory from '../../assets/history.png';
 import iconCenter from '../../assets/map_center.png';
-import marker from '../../assets/marker.png';
+import marker from '../../assets/logo.png';
 import customMapStyle from '../../mapstyle.json';
 
 import * as S from './styles';
@@ -20,8 +20,8 @@ interface ILatLng {
 
 const Map: React.FC = () => {
   const [latLng, setLatLng] = useState<ILatLng>({
-    latitude: -19.916483,
-    longitude: -43.935129,
+    latitude: 9.0372,
+    longitude: 38.7551,
   });
 
   const navigation = useNavigation();

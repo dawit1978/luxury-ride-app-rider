@@ -81,3 +81,16 @@ export const MessageInput = styled.TextInput<ThemeProps>`
   margin: 8% 0 4% 0;
   padding: 13px 17px;
 `;
+export const Button1 = styled.TouchableOpacity`
+  background-color: #B80028;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+`;
+export const ButtonText = styled.Text`
+font-family: ${({ theme }) => theme.font.bold};
+font-size: 18px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+`;

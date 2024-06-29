@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import logoSm from '../../assets/L.png';
 import visa from '../../assets/visa-white.png';
 import camera from '../../assets/camera.png';
+import PaymentMethodComponent from '../../components/PaymentMethod'
 
 import Header from '../../components/Header';
 import Button from '../../components/Button';
@@ -92,10 +93,26 @@ const AddCard: React.FC = () => {
             />
           </S.CvvWrapper>
         </S.ExpCvvWrapper>
-        <Button onPress={() => navigate('DrawerNavigator')}>Add Card</Button>
+        
+        <Button onPress={() => navigate('mainPage')}>Add Card</Button>
+
+        <S.Button onPress={() => navigate('mainPage')}>
+          <S.ButtonText bold>Cash</S.ButtonText>
+      </S.Button>
       </S.Inner>
     </S.Container>
   );
 };
 
 export default AddCard;
+// import PaymentMethodComponent from '../../components/PaymentMethod/'
+// import React from 'react'
+
+// function index() {
+//   return (
+//     <PaymentMethodComponent />
+
+//   )
+// }
+
+// export default index

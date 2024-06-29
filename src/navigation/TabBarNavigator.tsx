@@ -2,16 +2,18 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Home from '../screens/Home';
-import News from '../screens/News';
-import Matches from '../screens/Matches';
-import Shop from '../screens/Shop';
+import RideHistory from '../screens/RideHistory';
+import Wallet from '../screens/Wallet';
+import Share from '../screens/Share';
 import Icon from 'react-native-vector-icons/Ionicons';
 import EIcon from 'react-native-vector-icons/Entypo';
 import FIcon from 'react-native-vector-icons/FontAwesome';
+import RHistory from 'react-native-vector-icons/FontAwesome';
 import { TabBarParamsList } from '../../types';
 
 interface TabsProps {
 }
+
 
 const TabBar = createMaterialBottomTabNavigator<TabBarParamsList>();
 const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
@@ -44,20 +46,20 @@ const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
         }
       />
       <TabBar.Screen
-        name="News"
-        component={News}
+        name="RideHistory"
+        component={RideHistory}
         options={
           {
-          title:"News",
+          title:"RideHistory",
           tabBarIcon: ({color})=>(
-            <EIcon name="heart" color={color} size={26} />
+            <RHistory name="history" color={color} size={26} />
           )
           }
         }
       />
       <TabBar.Screen
-        name="Matches"
-        component={Matches}
+        name="Wallet"
+        component={Wallet}
         options={
           {
           title:"notifications",
@@ -68,8 +70,8 @@ const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
         }
       />
       <TabBar.Screen
-        name="Shop"
-        component={Shop}
+        name="Share"
+        component={Share}
         options={
           {
           title:"profile",
