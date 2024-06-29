@@ -27,18 +27,18 @@ const DrawerNavigator: React.FC<DrawerProps> = (props)=> {
               <View style={styles.menuAndLogoContainer}>
                 <View style={styles.headerContainer}>
                       <TouchableOpacity
-                        style={{zIndex:1}}
+                        style={{zIndex:1, backgroundColor: "white",width:40, height:40, alignItems:"center", justifyContent:"center", borderRadius:20 }}
                         onPress={() => {
                           props.navigation.toggleDrawer();
                         }}
                       >
-                        <EIcon name="menu" size={30} color="#000000" />
+                        <EIcon name="menu" size={25} color="#000000" />
                       </TouchableOpacity>
               
                  <View style={styles.logoContainer}>
                       <Image
                         source={require("../assets/logo.png")}
-                        style={{ height: 95, width: 95}}
+                        style={{ height: 75, width: 75}}
                         />
                   </View>
               </View>
@@ -74,7 +74,7 @@ const DrawerNavigator: React.FC<DrawerProps> = (props)=> {
 const styles = StyleSheet.create({
     headerContainer: {
         flexDirection: 'row',
-        width: "90%",
+        width: "80%",
         justifyContent:'space-between',
         alignItems: 'center',
         alignSelf:"center",

@@ -48,7 +48,7 @@ const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
         component={News}
         options={
           {
-          title:"News",
+          title:"Favorite",
           tabBarIcon: ({color})=>(
             <EIcon name="heart" color={color} size={26} />
           )
