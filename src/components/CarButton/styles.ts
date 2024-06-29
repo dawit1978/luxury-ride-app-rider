@@ -10,7 +10,7 @@ interface IProps extends ThemeProps {
 export const Container = styled.View<IProps>`
   border: ${({ active, theme }) =>
     active
-      ? `2px solid ${theme.color.secondary}`
+      ? `2px solid red`
       : `1px solid ${theme.color.gray}`};
   border-radius: 20px;
 `;

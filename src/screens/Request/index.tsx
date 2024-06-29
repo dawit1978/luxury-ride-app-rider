@@ -15,12 +15,15 @@ import Button from '../../components/Button';
 import theme from '../../theme';
 
 import * as S from './styles';
+import { TextInput } from 'react-native-paper';
 
 const Request: React.FC = () => {
   const [selected, setSelected] = useState('economy');
 
-  const navigation = useNavigation();
+  const [text, setText] = React.useState(" ");
 
+  const navigation = useNavigation();
+  
   return (
     <S.Container>
       <S.HeaderContainer>
@@ -59,7 +62,11 @@ const Request: React.FC = () => {
           coordinate={{ latitude: -19.916483, longitude: -43.935129 }}
         >
           <Callout>
-            <Text>Praça da Estação</Text>
+          <TextInput
+      value={text}
+      onChangeText={text => setText(text)}
+      placeholder='Bole, Atlas'
+    />
           </Callout>
         </Marker>
         <Marker
@@ -85,17 +92,17 @@ const Request: React.FC = () => {
         />
         <S.Options>
           <CarButton
-            text="Economy"
+            text="VIP"
             onPress={() => setSelected('economy')}
             active={selected === 'economy'}
           />
           <CarButton
-            text="Luxury"
+            text="VVIP"
             onPress={() => setSelected('luxury')}
             active={selected === 'luxury'}
           />
           <CarButton
-            text="Family"
+            text="Coorporate"
             onPress={() => setSelected('family')}
             active={selected === 'family'}
           />

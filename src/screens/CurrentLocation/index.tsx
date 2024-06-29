@@ -75,8 +75,8 @@ const Map: React.FC = () => {
       </S.Map>
       <S.OptionsContainer>
         <S.LeftOptions>
-          <MapButton icon={iconHome} />
-          <MapButton icon={iconHistory} />
+          {/* <MapButton icon={iconHome} /> */}
+          {/* <MapButton icon={iconHistory} /> */}
         </S.LeftOptions>
         <MapButton icon={iconCenter} noMargin onPress={centerMap} />
       </S.OptionsContainer>

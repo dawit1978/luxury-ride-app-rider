@@ -119,14 +119,14 @@ const Home:React.FC<TabBarProps<TabBarParamsList,'Home'>> = () => {
                               data ={filterData}
                               keyExtractor = {(item)=>item.id}
                               renderItem = { ({item})=>(
-                                  <View style = {styles.card}>
+                                  <TouchableOpacity style = {styles.card}  onPress ={()=>{navigate("CurrentLocation")}}>
                                       <View style ={styles.view2}>
                                           <Image style ={styles.image2} source = {item.image} />
                                       </View>
                                       <View>
                                           <Text style ={styles.title}>{item.name}</Text>
                                       </View>
-                                  </View>
+                                  </TouchableOpacity>
                               )}
                           />
                       </View>

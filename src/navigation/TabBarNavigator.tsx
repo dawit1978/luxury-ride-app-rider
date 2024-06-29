@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Home from '../screens/Home';
@@ -19,10 +19,24 @@ const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
     <TabBar.Navigator
       barStyle={{
         justifyContent:"center",
-        alignItems: "center"
+        alignItems: "center",
+        // position: 'absolute',
+        bottom: 0,
+        width: '95%',
+        height: 50,
+        // backgroundColor: '#F8F7FB',
+        borderRadius: 10,
+        elevation: 5,
+        marginBottom:30,
+        alignSelf:'center'
+        // flexDirection: 'row',
+        // justifyContent: 'space-around',
+        // paddingHorizontal: 20,
+        // alignItems: 'center',
 
       }}
       initialRouteName= {"Home"}
+      
       screenOptions={{
         tabBarColor:"white",
 
@@ -84,5 +98,19 @@ const TabBarNavigator: React.FC<TabsProps> = ({ }) => {
     </TabBar.Navigator>
   )
 }
-
+const styles = StyleSheet.create({
+  tabContainer: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: 70,
+    backgroundColor: '#F8F7FB',
+    borderRadius: 30,
+    elevation: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+});
 export default TabBarNavigator
